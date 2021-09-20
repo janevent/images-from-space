@@ -1,0 +1,12 @@
+.Header {
+    background-color: rgb(137, 252, 252);
+    color: rgb(3, 94, 94);
+    text-align:center;
+    min-height: 50vh;
+    margin: 0;
+}
+
+.title {
+    text-align: center;
+    line-height: 50vh;
+}
