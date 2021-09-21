@@ -1,0 +1,21 @@
+.SignInComponent {
+    display: flex;
+    flex-direction: row;
+}
+
+button, input {
+    margin: 10px;
+}
+
+label, input {
+    color: blueviolet;
+}
+
+button {
+    border-style: solid;
+    border-width: 1px;
+    border-color: blueviolet;
+    background-color: lightyellow;
+    color: blueviolet;
+    border-radius: 15%;
+}
