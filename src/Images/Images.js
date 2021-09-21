@@ -1,4 +1,5 @@
 import React, { useState, useEffect }  from 'react';
+import LikeButton from '../LikeButton/LikeButton';
 
 export default function Images({data}){
 
@@ -17,7 +18,7 @@ export default function Images({data}){
                     <img src={image.hdurl}></img>
                     <p>Date: {image.date}</p>
                     <p>Title: {image.title}</p>
-                    
+                    <LikeButton id={ind} ></LikeButton>
                 </div>
             } )}
             
