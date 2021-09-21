@@ -15,7 +15,9 @@ function App() {
       fetch("https://api.nasa.gov/planetary/apod?api_key=WSLYI2NcNOkc16wVUAHO5oC6ISjOKsVvJvZSncoW")
       .then( res => res.json())
       .then(result => {
-        console.log('data:' + JSON.stringify(result))
+        let r = JSON.stringify(result)
+        console.log('data:' + r)
+        setData(result);
       })
       .catch(err => console.error(err))
     
@@ -39,7 +41,7 @@ function App() {
       <Header></Header>
       <NavBar loggedIn={loggedIn} onSignOut={onSignOut} ></NavBar>
       {loggedIn ?
-        <Images></Images>
+        <Images data={data} ></Images>
         :
         <SignInComponent onSignIn={onSignIn} />
       } 

@@ -1,11 +1,19 @@
-import React, {getState, setState} from 'react';
+import React, { useState, useEffect }  from 'react';
 
-export default function Images({loggedIn}){
+export default function Images({data}){
+
+    const [images, setImages] = useState(data)
+
+    useEffect( () => {
+        console.log('images: ' + images.url)
+    })
     return(
-        loggedIn ?
-        <div className="Images"></div>
-        :
-        ""
+        
+        <div className="Images">
+            <h2>Images In Space</h2>
+            <img src={images.url}></img>
+        </div>
+        
     )
 
 } 
