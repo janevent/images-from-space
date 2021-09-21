@@ -10,9 +10,11 @@ import { Router, Route, Switch} from 'react-router-dom'
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [data, setData ] = useState({ images: [] });
+  const [hasError, setHasError ] = useState(false)
   const url = "https://api.nasa.gov/planetary/apod?count=20&api_key=WSLYI2NcNOkc16wVUAHO5oC6ISjOKsVvJvZSncoW"
 
   useEffect(()=> {   
+    let fetchUrl = () => { 
       fetch(url)
       .then( res => res.json())
       .then(result => {
@@ -20,7 +22,13 @@ function App() {
         console.log('data:' + r)
         setData({images: result} );
       })
-      .catch(err => console.error(err))  
+      .catch(err => {
+        console.error(err)
+        setHasError(true)
+      }) 
+    }
+    return fetchUrl
+
   }, [])
 
   const onSignOut = ()=> {
