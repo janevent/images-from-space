@@ -1,4 +1,11 @@
 nav {
-    background-color: plum;
+    background-color: rgb(99, 25, 99);
     color: purple;
+    min-height: 8vh;
+    text-align: left;
+}
+
+button {
+    border-radius: 0px;
+    border-width: 3px;
 }

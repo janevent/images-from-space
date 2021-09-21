@@ -4,7 +4,7 @@ import './SignInComponent.css';
 export default function SignInComponent({loggedIn, onSignIn}){
     return(
         
-        <form onSubmit={onSignIn}>
+        <form className="SignInComponent" onSubmit={onSignIn}>
             <label htmlFor="name" > Name </label>
             <input type="text" id="name" name="name" placeholder="your name"></input>
             <label htmlFor="email"> Email </label>

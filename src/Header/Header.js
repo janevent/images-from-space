@@ -4,7 +4,7 @@ import './Header.css';
 export default function Header(){
     return(
         <header className="Header">
-            <h1 className="title">Spacetigram</h1>
+            <h1 className="title">From Outer Space</h1>
         </header>
     )
 }

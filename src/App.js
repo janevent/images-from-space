@@ -10,18 +10,18 @@ import { Router, Route, Switch} from 'react-router-dom'
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [data, setData ] = useState({ images: [] });
+  const url = "https://api.nasa.gov/planetary/apod?count=20&api_key=WSLYI2NcNOkc16wVUAHO5oC6ISjOKsVvJvZSncoW"
 
   useEffect(()=> {   
-      fetch("https://api.nasa.gov/planetary/apod?api_key=WSLYI2NcNOkc16wVUAHO5oC6ISjOKsVvJvZSncoW")
+      fetch(url)
       .then( res => res.json())
       .then(result => {
         let r = JSON.stringify(result)
         console.log('data:' + r)
-        setData(result);
+        setData({images: result} );
       })
-      .catch(err => console.error(err))
-    
-  })
+      .catch(err => console.error(err))  
+  }, [])
 
   const onSignOut = ()=> {
     console.log('firstloggedIn', loggedIn)

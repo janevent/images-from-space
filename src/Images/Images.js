@@ -1,5 +1,6 @@
 import React, { useState, useEffect }  from 'react';
 import LikeButton from '../LikeButton/LikeButton';
+import './Images.css';
 
 export default function Images({data}){
 
@@ -11,17 +12,17 @@ export default function Images({data}){
     return(
         
         <div className="Images">
-            <h2>Images In Space</h2>
-            <p>{images[0].date}</p>
+            
             {
             images.map( (image, ind) => {
                 return(
                 <div className="image" id={ind}>
 
                     <img src={image.hdurl}></img>
-                    <p>Date: {image.date.toString()}</p>
-                    <p>Title: {JSON.stringify(image.title) }</p>
+                    <footer>Date: {image.date.toString()}</footer>
+                    <footer>Title: {JSON.stringify(image.title) }</footer>
                     <LikeButton id={ind} ></LikeButton>
+                    <hr></hr>
                 </div>
                 )
             } )
