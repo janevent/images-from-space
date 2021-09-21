@@ -6,3 +6,7 @@ img {
 .Image {
     margin-top: 20px;
 }
+
+ul {
+    list-style: none;
+}
