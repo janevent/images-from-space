@@ -6,21 +6,27 @@ export default function Images({data}){
     const [images, setImages] = useState(data.images)
 
     useEffect( () => {
-        console.log('images: ' + images)
+        console.log('images: ' + images[0] +images[0].hdurl + (images[0].date).toString() )
     })
     return(
         
         <div className="Images">
             <h2>Images In Space</h2>
-            {images.forEach( (image, ind) => {
+            <p>{images[0].date}</p>
+            {
+            images.map( (image, ind) => {
+                return(
                 <div className="image" id={ind}>
 
                     <img src={image.hdurl}></img>
-                    <p>Date: {image.date}</p>
-                    <p>Title: {image.title}</p>
+                    <p>Date: {image.date.toString()}</p>
+                    <p>Title: {JSON.stringify(image.title) }</p>
                     <LikeButton id={ind} ></LikeButton>
                 </div>
-            } )}
+                )
+            } )
+            
+            }
             
         </div>
         
