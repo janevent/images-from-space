@@ -1,23 +1,48 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Header/Header';
+import NavBar from './NavBar/NavBar';
+import React, {useEffect, useState} from 'react';
+import SignInComponent from './SignInComponent/SignInComponent.js';
+import Images from './Images/Images.js';
+
+import { Router, Route, Switch} from 'react-router-dom'
 
 function App() {
+  const [loggedIn, setLoggedIn] = useState(false);
+  const [data, setData ] = useState({ images: [] });
+
+  useEffect(()=> {   
+      fetch("https://api.nasa.gov/planetary/apod?api_key=WSLYI2NcNOkc16wVUAHO5oC6ISjOKsVvJvZSncoW")
+      .then( res => res.json())
+      .then(result => {
+        console.log('data:' + JSON.stringify(result))
+      })
+      .catch(err => console.error(err))
+    
+  })
+
+  const onSignOut = ()=> {
+    console.log('firstloggedIn', loggedIn)
+    setLoggedIn(false)
+    console.log('loggedIn', loggedIn)
+  }
+
+  const onSignIn = (event) => {
+    event.preventDefault();
+    setLoggedIn(true)
+  }
+
+
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header></Header>
+      <NavBar loggedIn={loggedIn} onSignOut={onSignOut} ></NavBar>
+      {loggedIn ?
+        <Images></Images>
+        :
+        <SignInComponent onSignIn={onSignIn} />
+      } 
     </div>
   );
 }
