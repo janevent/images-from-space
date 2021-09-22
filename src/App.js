@@ -5,8 +5,6 @@ import React, {useEffect, useState} from 'react';
 import SignInComponent from './SignInComponent/SignInComponent.js';
 import Images from './Images/Images.js';
 
-import { Router, Route, Switch} from 'react-router-dom'
-
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [data, setData ] = useState({ images: [] });
@@ -27,8 +25,7 @@ function App() {
         setHasError(true)
       }) 
     }
-    return fetchUrl
-
+    fetchUrl()
   }, [])
 
   const onSignOut = ()=> {
@@ -49,7 +46,9 @@ function App() {
       <Header></Header>
       <NavBar loggedIn={loggedIn} onSignOut={onSignOut} ></NavBar>
       {loggedIn ?
-        <Images data={data} ></Images>
+        !hasError ?
+          <Images data={data} hasError={hasError}></Images>
+          : <p>Error Loading Images...</p>
         :
         <SignInComponent onSignIn={onSignIn} />
       } 
