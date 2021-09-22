@@ -5,8 +5,6 @@ export default function SignInComponent({loggedIn, onSignIn}){
     const [formData, setFormData] = useState({name: "", email: ""})
 
     const onChangeForm = (event) => {
-        
-        console.log('event' + event.target.name)
         const {name, value} = event.target
         setFormData({...formData, ...{[name]: value}})
     }
