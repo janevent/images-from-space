@@ -21,5 +21,20 @@ ul {
 }
 
 hr {
-    color: purple;
+    border-color: purple;
+}
+
+footer {
+    color: lightskyblue;
+}
+
+.image{
+    width: fit-content;
+    margin: auto;
+}
+
+.image-details{
+    display: flex;
+    flex-direction: row;
+    
 }

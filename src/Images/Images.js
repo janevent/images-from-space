@@ -19,10 +19,14 @@ export default function Images({data}){
                 <li className="image" key={ind}>
 
                     <img src={image.hdurl}></img>
-                    <footer>Date: {image.date.toString()}</footer>
-                    <footer>Title: {JSON.stringify(image.title) }</footer>
+                    <div className="image-details">
                     <LikeButton id={ind} ></LikeButton>
-                    <hr></hr>
+                    <footer>{image.date.toString()} </footer>
+                    <br></br>
+                    <footer>   {  JSON.stringify(image.title) }</footer>
+                    </div>
+                    {/*<hr></hr>*/
+                    }
                 </li>
                 )
             } )

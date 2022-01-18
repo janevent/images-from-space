@@ -3,7 +3,7 @@ body {
   font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background-image: linear-gradient(to right, rgb(0, 0, 0), 40%, rgb(62, 31, 65) );
 }
 
 code {

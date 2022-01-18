@@ -14,9 +14,6 @@ export default function LikeButton({ind}){
     //})
     return(
         <div className="LikeButton">
-            <button className="likebutton" id={ind} onClick={onClickButton} value={liked? "unlike" : "like"}>
-                {liked? "unlike" : "like"}
-            </button>
             {
                 liked ?
                 <div>
@@ -25,6 +22,9 @@ export default function LikeButton({ind}){
                 :
                 ""
             }
+            <button className="likebutton" id={ind} onClick={onClickButton} value={liked? "unlike" : "like"}>
+                {liked? "unlike" : "like"}
+            </button>
         </div>
     )
 }
