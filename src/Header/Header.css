@@ -11,6 +11,7 @@
 }
 
 .title {
+    position: relative;
     text-align: center;
     line-height: 30vh;
     font-size: 3em;
@@ -18,3 +19,40 @@
     background-clip: text;
     color: transparent;
 }
+
+.cloud {
+    width: 800px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: -100px;
+  }
+  
+  #cloud-1 {
+    top: 0px;
+    height: 40px;
+    filter: url(#filter-1);
+    box-shadow: 200px 170px 17px 40px rgba(255, 255, 255, 0.9);
+  }
+
+  #cloud-2 {
+    top: 0px;
+    height: 40px;
+    filter: url(#filter-1);
+    box-shadow: 200px 170px 19px 40px rgba(255, 255, 255, 0.9);
+  }
+
+  #cloud-3 {
+    top: 0px;
+    height: 40px;
+    filter: url(#filter-1);
+    box-shadow: 200px 170px 19px 40px rgba(255, 255, 255, 0.9);
+  }
+
+  #cloud-4 {
+    top: 0px;
+    height: 40px;
+    filter: url(#filter-1);
+    box-shadow: 200px 170px 19px 40px rgba(255, 255, 255, 0.9);
+  }

@@ -20,7 +20,6 @@ export default function LikeButton({ind}){
             {
                 liked ?
                 <div>
-                    <p className="liked">Liked!</p>
                     <img className="star" name="star" src="https://media.giphy.com/media/k9F6ZtOTEr4UGmt3H2/giphy.gif" />
                 </div>
                 :

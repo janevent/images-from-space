@@ -23,13 +23,17 @@ label, input {
 input {
     border-color: blueviolet;
     color: blueviolet;
-    transition: 4ms;
+    transition: 2ms;
     /*background: linear-gradient(to bottom, lightblue, white);*/
 }
 
 input:hover{
     /*background: rgb(150, 50, 150);*/
-    background: lightblue;
+    background-color: lightskyblue;
+}
+
+input:active{
+    background-color: rgb(232, 223, 233);
 }
 
 button {
@@ -45,6 +49,13 @@ button {
 
 button:hover{
     /*background-color: lightblue;*/
-    color: purple;
-    border-color: purple;
+    /*color: lightskyblue;
+    /*rgb(173, 93, 182);;*/
+    /*border-color: lightskyblue;*/
+    /*rgb(173, 193, 182);;*/
+    background: linear-gradient(to right, lightblue, lightskyblue);
+    background-clip: text;
+    
+    color: transparent;
+    border-color: lightskyblue;
 }

@@ -1,6 +1,7 @@
 .star {
     max-width: 100px;
     margin-top: 0px;
+    border-style: none;
 }
 .liked {
     color: rgb(236, 236, 6);
