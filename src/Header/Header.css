@@ -10,5 +10,6 @@
 
 .title {
     text-align: center;
-    line-height: 50vh;
+    line-height: 30vh;
+    font-size: 3em;
 }
