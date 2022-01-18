@@ -6,10 +6,15 @@
     margin: 0;
     padding: 0;*/
     margin-top: 0px;
+    
+
 }
 
 .title {
     text-align: center;
     line-height: 30vh;
     font-size: 3em;
+    background: linear-gradient(to right, rgb(99, 25, 99), blueviolet);
+    background-clip: text;
+    color: transparent;
 }

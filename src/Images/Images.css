@@ -1,12 +1,25 @@
 img {
     max-width: 700px;
     margin-top: 20px;
+    border-radius: 10px;
+    
 }
 
-.Image {
+img:hover{
+    filter: brightness(60%);
+}
+
+img {
     margin-top: 20px;
+    transition: 4ms;
+    border-style: ridge;
+    border-color: lightblue;
 }
 
 ul {
     list-style: none;
+}
+
+hr {
+    color: purple;
 }

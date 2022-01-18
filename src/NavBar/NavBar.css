@@ -1,11 +1,23 @@
 nav {
-    background-color: rgb(99, 25, 99);
+    /*background-color: rgb(99, 25, 99);*/
+    border-image: linear-gradient(to right, rgb(99, 25, 99), white);
     color: purple;
+    border-width: 20px;
     min-height: 8vh;
     text-align: left;
+    transition: 2ms;
 }
 
 button {
-    border-radius: 0px;
+    border-radius: 5%;
     border-width: 3px;
+    margin: 15px;
+    border-color: rgb(99, 25, 99);
+    color: rgb(99, 25, 99);
+    transition: 3ms;
+}
+
+button:hover {
+    color: blueviolet;
+    border-color: blueviolet;
 }

@@ -9,6 +9,7 @@
     margin-left: auto;
     margin-right: auto;
     padding: 15px;
+    background-color: white;
 }
 
 button, input {
@@ -39,9 +40,11 @@ button {
     background: transparent;
     color: blueviolet;
     border-radius: 5%;
-    transition: 2ms;
+    transition: 3ms;
 }
 
 button:hover{
-    background-color: lightblue;
+    /*background-color: lightblue;*/
+    color: purple;
+    border-color: purple;
 }
