@@ -81,13 +81,7 @@ function App() {
         :
         <SignInComponent onSignIn={onSignIn} />
       } 
-      <div className="star star-1">
-      </div>
-      <div className="star star-2">
-      </div>
-      <svg width="0" height="0">
-        
-      </svg>
+      
     </div>
   );
 }

@@ -38,3 +38,42 @@ footer {
     flex-direction: row;
     
 }
+/*loading */
+.dot-container-for-image{
+    width: 40px;
+    margin: auto;
+}
+
+#dot-4, #dot-5, #dot-6{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: yellow;
+    border-radius: 50%;
+    margin: 3px;
+  }
+  
+  #dot-4{
+    background-color: lightskyblue;
+    animation: bounce 0.6s 0.1s linear infinite;
+  }
+  
+  #dot-5{
+    background-color: blueviolet;
+    animation: bounce 0.6s 0.3s linear infinite;
+  }
+  
+  #dot-6{
+    background-color: yellow;
+    animation: bounce 0.6s 0.5s linear infinite;
+  }
+  
+  @keyframes bounce{
+    50% {
+      transform: translate(0, 15px);
+    }
+  }
+  
+  .hidden{
+    display: none;
+  } 
