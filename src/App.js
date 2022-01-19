@@ -29,9 +29,7 @@ function App() {
   }, [])
 
   const onSignOut = ()=> {
-    console.log('firstloggedIn', loggedIn)
     setLoggedIn(false)
-    console.log('loggedIn', loggedIn)
   }
 
   const onSignIn = (event) => {
@@ -40,8 +38,7 @@ function App() {
   }
 
 
-  return (
-    
+  return (  
     <div className="App">
       <Header></Header>
       <NavBar loggedIn={loggedIn} onSignOut={onSignOut} ></NavBar>
@@ -49,6 +46,19 @@ function App() {
       </div>
       <div className="star" id="star-2">
       </div>
+      <div className="star" id="star-3">
+      </div>
+      <div className="star" id="star-4">
+      </div>
+      <div className="star" id="star-5">
+      </div>
+      <div className="star" id="star-6">
+      </div>
+      <div className="star" id="star-7">
+      </div>
+      <div className="star" id="star-8">
+      </div>
+      <div className="star" id="star-9"></div>
       <svg width="0" height="0">
       <filter id="filter-star-1" >
           <feTurbulence type="fractalNoise" baseFrequency="0.001" numOctaves="0" seed="0" />
