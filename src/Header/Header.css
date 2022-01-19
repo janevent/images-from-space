@@ -6,8 +6,6 @@
     margin: 0;
     padding: 0;*/
     margin-top: 0px;
-    
-
 }
 
 .title {
@@ -21,11 +19,11 @@
 }
 
 .cloud {
-    width: 800px;
-    height: 100px;
+    width: 900px;
+    height: 89px;
     border-radius: 50%;
     position: absolute;
-    top: 0px;
+    top: 50px;
     left: -100px;
   }
   
@@ -33,26 +31,32 @@
     top: 0px;
     height: 40px;
     filter: url(#filter-1);
-    box-shadow: 200px 170px 17px 40px rgba(255, 255, 255, 0.9);
+    fill: #fff;
+    opacity: 0.9;
+    box-shadow: 200px 170px 17px 45px rgba(255, 255, 255, 0.9);
   }
 
   #cloud-2 {
     top: 0px;
-    height: 40px;
-    filter: url(#filter-1);
-    box-shadow: 200px 170px 19px 40px rgba(255, 255, 255, 0.9);
+    height: 20px;
+    filter: url(#filter-2);
+    box-shadow: 200px 150px 19px 17px rgba(255, 255, 255, 0.9);
   }
 
   #cloud-3 {
-    top: 0px;
+    top: 70px;
+    right: 300px;
+    width: 30px;
     height: 40px;
-    filter: url(#filter-1);
-    box-shadow: 200px 170px 19px 40px rgba(255, 255, 255, 0.9);
+    position: absolute;
+    border-radius: 50%;
+    filter: url(#filter-3);
+    box-shadow: 50px 50px 35px 17px rgba(255, 255, 255, 0.9);
   }
 
-  #cloud-4 {
+  /*#cloud-4 {
     top: 0px;
     height: 40px;
-    filter: url(#filter-1);
+    filter: url(#filter-4);
     box-shadow: 200px 170px 19px 40px rgba(255, 255, 255, 0.9);
-  }
+  } */

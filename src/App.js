@@ -45,6 +45,16 @@ function App() {
     <div className="App">
       <Header></Header>
       <NavBar loggedIn={loggedIn} onSignOut={onSignOut} ></NavBar>
+      <div className="star" id="star-1">
+      </div>
+      <div className="star" id="star-2">
+      </div>
+      <svg width="0" height="0">
+      <filter id="filter-star-1" >
+          <feTurbulence type="fractalNoise" baseFrequency="0.001" numOctaves="0" seed="0" />
+          <feDisplacementMap  in="SourceGraphic" scale="120" />
+        </filter>
+      </svg>
       {loggedIn ?
         !hasError ?
           <Images data={data} hasError={hasError}></Images>
@@ -52,6 +62,13 @@ function App() {
         :
         <SignInComponent onSignIn={onSignIn} />
       } 
+      <div className="star star-1">
+      </div>
+      <div className="star star-2">
+      </div>
+      <svg width="0" height="0">
+        
+      </svg>
     </div>
   );
 }
