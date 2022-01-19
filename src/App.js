@@ -8,7 +8,8 @@ import Images from './Images/Images.js';
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [data, setData ] = useState({ images: [] });
-  const [hasError, setHasError ] = useState(false)
+  const [hasError, setHasError ] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const url = "https://api.nasa.gov/planetary/apod?count=20&api_key=WSLYI2NcNOkc16wVUAHO5oC6ISjOKsVvJvZSncoW"
 
   useEffect(()=> {   
@@ -19,6 +20,7 @@ function App() {
         let r = JSON.stringify(result)
         console.log('data:' + r)
         setData({images: result} );
+        setIsLoading(false);
       })
       .catch(err => {
         console.error(err)
@@ -37,11 +39,18 @@ function App() {
     setLoggedIn(true)
   }
 
+  const loading = (isLoading) ? "loading" : "hidden"
+
 
   return (  
     <div className="App">
       <Header></Header>
       <NavBar loggedIn={loggedIn} onSignOut={onSignOut} ></NavBar>
+      <div className="dots-container" className={loading} >
+        <div id="dot-1"></div>
+        <div id="dot-2"></div>
+        <div id="dot-3"></div>
+      </div>
       <div className="star" id="star-1">
       </div>
       <div className="star" id="star-2">
