@@ -1,6 +1,4 @@
 .SignInComponent {
-    /*display: flex;
-    flex-direction: row;*/
     margin-top: 50px;
     border-style: solid;
     width: fit-content;
@@ -24,11 +22,9 @@ input {
     border-color: blueviolet;
     color: blueviolet;
     transition: 2ms;
-    /*background: linear-gradient(to bottom, lightblue, white);*/
 }
 
 input:hover{
-    /*background: rgb(150, 50, 150);*/
     background-color: lightskyblue;
 }
 
@@ -40,7 +36,6 @@ button {
     border-style:inset;
     border-width: 3px;
     border-color: blueviolet;
-    /*background: liniear-gradient(lightyellow, transparent);*/
     background: transparent;
     color: blueviolet;
     border-radius: 5%;
@@ -48,14 +43,8 @@ button {
 }
 
 button:hover{
-    /*background-color: lightblue;*/
-    /*color: lightskyblue;
-    /*rgb(173, 93, 182);;*/
-    /*border-color: lightskyblue;*/
-    /*rgb(173, 193, 182);;*/
     background: linear-gradient(to right, lightblue, lightskyblue);
-    background-clip: text;
-    
+    background-clip: text;   
     color: transparent;
     border-color: lightskyblue;
 }
