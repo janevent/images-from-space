@@ -55,9 +55,12 @@
     box-shadow: 50px 50px 35px 17px rgba(255, 255, 255, 0.9);
   }
 
-  /*#cloud-4 {
-    top: 0px;
-    height: 40px;
+  /* #cloud-4 {
+    top: 70px;
+    right: 5.5vh;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
     filter: url(#filter-4);
-    box-shadow: 200px 170px 19px 40px rgba(255, 255, 255, 0.9);
-  } */
+    box-shadow: 200px 150px 19px 17px rgba(255, 255, 255, 0.9);
+  }  */

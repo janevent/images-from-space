@@ -59,3 +59,8 @@ button:hover{
     color: transparent;
     border-color: lightskyblue;
 }
+
+button:active{
+    color: rgb(210, 247, 248);
+    border-color: rgb(210, 247, 248);
+}

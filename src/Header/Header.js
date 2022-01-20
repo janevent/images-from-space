@@ -7,7 +7,7 @@ export default function Header(){
             <div className="cloud" id="cloud-1"></div>
             <div className="cloud" id="cloud-2"></div>
             <div id="cloud-3"></div>
-            <div className="cloud" id="cloud-4"></div>
+            <div id="cloud-4"></div>
             <svg width="0" height="0">
                 <filter id="filter-1">
                     <feTurbulence type="fractalNoise" baseFrequency="0.066" numOctaves="19" seed="9900" />     
@@ -22,6 +22,10 @@ export default function Header(){
                     <feTurbulence type="fractalNoise" baseFrequency="0.020" numOctaves="33" seed="700" />     
                     <feDisplacementMap  in="SourceGraphic" scale="40" />
                 </filter> 
+                <filter id="filter-4">
+                    <ferTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="35" seed="700" />
+                    <feDisplacementMap in="SourceGraphic" scale="40" />
+                </filter>
             </svg>
             <h1 className="title">From Outer Space</h1>
         </header>
